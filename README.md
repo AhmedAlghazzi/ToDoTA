@@ -1,2 +1,2 @@
 # ToDoTA
-Thaar an Ahmad to do project
+Thaar and Ahmad to do project
