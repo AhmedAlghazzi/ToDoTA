@@ -1,24 +1,39 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
-	
 
-	}
-=======
-		List<Todo> TodoList=new ArrayList<Todo>();
+	
+		List<ToDo> TodoList=new ArrayList<ToDo>();
+		
+		
+		for (int i = 0; i < 10; i++) {
 		System.out.println("Enter Your Task Name");
 		Scanner sc= new Scanner(System.in);
-		String task=sc.nextLine();
+		String task= sc.nextLine();
 		System.out.println("Enter Your Task Time");
-		LocalDate date =sc.nextLine();
+		String date= sc.next();
+		LocalDate localDate = LocalDate.parse(date);
+	
+		
+		ToDo t1=new ToDo(task,localDate);
+		TodoList.add(i, t1);
+		}
+		
+		
+		
+		
+	}
+
 		
 		
 
->>>>>>> branch 'master' of https://github.com/thair35/ToDoTA.git
+
 
 }
-	}
+	

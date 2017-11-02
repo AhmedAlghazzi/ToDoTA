@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 
-public class Todo {
+public class ToDo {
 	
 	String task;
 	LocalDate date;
-	public Todo(String task, LocalDate date) {
+	public ToDo(String task, LocalDate date) {
 		super();
 		this.task = task;
 		this.date = date;
