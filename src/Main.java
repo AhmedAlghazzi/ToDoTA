@@ -26,7 +26,7 @@ public class Main {
 			int x=sc.nextInt();
 			switch (x) {
 			case 1:
-				System.out.println("hi 1");
+				
 
 				break;
 			case 2:
