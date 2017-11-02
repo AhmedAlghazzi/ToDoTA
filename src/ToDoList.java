@@ -21,14 +21,18 @@ public class ToDoList  {
 
 		ToDo t=new ToDo(task,localDate);
 		TodoList.add(t);
+		System.out.println("Item Added");		
+	
 		nTask++;
 		
 	}
 	public void deletetItem(ToDo t) 
 	{
-		
-		
-		
+		System.out.println("Enter item number you want to delete");
+		int x=sc.nextInt();
+		nTask=x;
+		TodoList.remove(nTask);
+		System.out.println("Item deleated");		
 	}
 	public void editItem(ToDo t) 
 	{
@@ -55,17 +59,5 @@ public class ToDoList  {
 
 
 
-
-	public List<ToDo> getTodoList() {
-		return TodoList;
-	}
-
-
-
-
-	public void setTodoList(List<ToDo> todoList) {
-		TodoList = todoList;
-	}
-	
 
 }
