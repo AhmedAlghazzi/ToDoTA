@@ -29,15 +29,16 @@ public class ToDoList  {
 		nTask++;
 		
 	}
-	public void deletetItem(ToDo t) 
+	public void deletetItem() 
 	{
-		System.out.println("Enter item number you want to delete");
+		System.out.println("Enter item task number you want to delete");
 		int x=sc.nextInt();
-		nTask=x;
-		TodoList.remove(nTask);
-		System.out.println("Item deleated");		
-	}
-	public void editItem(ToDo t) 
+		TodoList.remove(x-1);
+		System.out.println("Item deleated");
+		nTask--;
+		
+			}
+	public void editItem() 
 	{
 		
 		System.out.println("Enter the new title:");
@@ -50,22 +51,24 @@ public class ToDoList  {
 		t.setDate(localDate);
 		
 	}
-	public void deadLineDate() 
+	public void deadLineDate(ToDoList tList) 
 	{
+		
+//		System.out.println("Enter item task number you want cha");
+//		int x=sc.nextInt();
+				LocalDate today=LocalDate.now();
+				
+		if(today < TodoList.get(t)){
+			
+		    System.out.println("SAME");
+		}
 		
 		
 		
 	}
 	public void printTodoList() {
-	
-<<<<<<< HEAD
-	
-	
-
-
-
-=======
-		Iterator<ToDo> it1=TodoList.iterator();
+		
+	Iterator<ToDo> it1=TodoList.iterator();
 		while (it1.hasNext())
 		{
 			ToDo t2=it1.next();
@@ -73,6 +76,5 @@ public class ToDoList  {
 			System.out.println(+nTask+"                    "+t2.toString());
 		}
 	}
->>>>>>> branch 'master' of https://github.com/thair35/ToDoTA.git
 
 }
