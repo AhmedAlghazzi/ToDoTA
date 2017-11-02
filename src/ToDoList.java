@@ -8,8 +8,6 @@ public class ToDoList  {
 	List<ToDo> TodoList=new ArrayList<ToDo>();
 	Scanner sc= new Scanner(System.in);
 	private static int nTask=0;
-
-	
 	
 	
 	public void addItem() 
