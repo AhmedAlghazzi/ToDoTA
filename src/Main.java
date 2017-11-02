@@ -26,6 +26,7 @@ public class Main {
 			switch (x) {
 			case 1:
 				
+				tlist.addItem();
 
 				break;
 			case 2:
@@ -49,6 +50,7 @@ public class Main {
 				break;
 			case 8:
 
+				tlist.printTodoList();
 				break;
 
 			default:System.out.println(" please enter a number between 1 and 8");
@@ -57,24 +59,6 @@ public class Main {
 			i++;
 
 		} while(i<8);
-
-
-
-
-
-		//		for (int i = 0; i < x+1; i++) 
-		//		{
-		//			System.out.println("Enter Your Task Name");
-		//			String task= sc.nextLine();
-		//			
-		//			System.out.println("Enter Your Task Time");
-		//			String date= sc.next();
-		//			LocalDate localDate = LocalDate.parse(date);
-		//	
-		//			ToDo t1=new ToDo(task,localDate);
-		////			TodoList.add(i, t1);
-		//			tlist.addItem(t1);
-		//		}
 
 	}	
 }	
