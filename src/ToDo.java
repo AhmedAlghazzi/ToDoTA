@@ -23,6 +23,12 @@ public class ToDo {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
+
+
+	@Override
+	public String toString() {
+		return "ToDo [task=" + task + ", date=" + date + "]";
+	}
 	
 	
 	
