@@ -10,6 +10,7 @@ public class ToDo {
 		this.date = date;
 	}
 	
+	
 	public String getTask() {
 		return task;
 	}
