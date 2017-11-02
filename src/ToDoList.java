@@ -22,25 +22,24 @@ public class ToDoList  {
 		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
 		
-		t=new ToDo(task,localDate);
-		TodoList.add(t);
+		TodoList.add(new ToDo(task,localDate));
 		nTask++;
 		
 	}
-	public void deletetItem(ToDo t) 
+	public void deletetItem() 
 	{
 		
 		
 		
 	}
-	public void editItem(ToDo t) 
+	public void editItem() 
 	{
 		
 		System.out.println("Enter the new title:");
 		String task= sc.nextLine();
 		
 		System.out.println("Enter the new date of the task:");
-		String date= sc.next();
+		String date= sc.nextLine();
 		LocalDate localDate = LocalDate.parse(date);
 		t.setTask(task);
 		t.setDate(localDate);
@@ -50,6 +49,21 @@ public class ToDoList  {
 	{
 		
 		
+		
+	}
+	public void removeDoneItem(ToDoList tlist) 
+	{
+//		Iterator<ToDo> it1=new 
+//		for (int i = 0; i < tlist.nTask+1 ; i++) 
+//		{
+//			LocalDate dlist=tlist.getDate();
+//			LocalDate dNow=LocalDate.now();
+//			if (dNow > dlist) {
+//				
+//			} else {
+//
+//			}
+//		}
 		
 	}
 	public void printTodoList() {
