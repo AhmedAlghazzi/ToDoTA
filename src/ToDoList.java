@@ -4,29 +4,28 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class ToDoList {
-	
+public class ToDoList  {
+
 	ArrayList<ToDo> tlist=new ArrayList<ToDo>();
-		private ToDo t;
+	private ToDo t;
 	Scanner sc= new Scanner(System.in);
 	private static int nTask=0;
-	
-	
+
+
 	public void addItem() 
 	{
 		System.out.println("Enter Your Task Name");
 		String task= sc.next();
-		
-		System.out.println("Enter Your Task Time");
+				System.out.println("Enter Your Task Time");
 		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
-		
+
 		ToDo t=new ToDo(task,localDate);
 		tlist.add(t);
 		System.out.println("Item Added");		
-	
+
 		nTask++;
-		
+
 	}
 	public void deletetItem() 
 	{
@@ -35,40 +34,49 @@ public class ToDoList {
 		tlist.remove(x-1);
 		System.out.println("Item deleated");
 		nTask--;
-		
-			}
+
+	}
 	public void editItem() 
 	{
+
 		System.out.println("choos the item number you want to edit");
 		int x=sc.nextInt();
 		tlist.get(x-1);
-		System.out.println("Enter the new title:");
+
+
 		String task= sc.next();
 		 t.setTask(task);
 		System.out.println("Enter the new date of the task:");
 		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
 		t.setDate(localDate);
+
 		System.out.println("Item edited");
+
 	}
 	
 	public void deadLineDate(ToDoList tlist) 
 	{
+
+		//		System.out.println("Enter item task number you want cha");
+		//		int x=sc.nextInt();
+		LocalDate today=LocalDate.now();
 		
 //		System.out.println("Enter item task number you want cha");
 //		int x=sc.nextInt();
-				LocalDate today=LocalDate.now();
+				
 				
 					
-		    System.out.println("SAME");
+		   
 		}
+
 		
+
 		
-		
-	
+
 	public void printTodoList() {
-		
-	Iterator<ToDo> it1=tlist.iterator();
+
+		Iterator<ToDo> it1=tlist.iterator();
 		while (it1.hasNext())
 		{
 			ToDo t2=it1.next();

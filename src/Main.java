@@ -35,7 +35,7 @@ public class Main {
 				t1.deadLineDate(t1);
 				break;
 			case 4:
-				
+
 				break;
 
 			case 5:
@@ -45,7 +45,7 @@ public class Main {
 
 				break;
 			case 7:
-t1.editItem();
+				t1.editItem();
 				break;
 			case 8:
 
