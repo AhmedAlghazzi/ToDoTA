@@ -75,5 +75,8 @@ public class ToDoList {
 			System.out.println(+nTask+"                    "+t2.toString());
 		}
 	}
+	public ToDoList() {
+		super();
+	}
 
 }

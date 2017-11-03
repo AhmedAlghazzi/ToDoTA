@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		ArrayList<ToDo> tlist=new ArrayList<ToDo>();
-		
+
+		ToDoList t1=new ToDoList ();
 		int i=0;
 		Scanner sc= new Scanner(System.in);
 
@@ -25,17 +25,17 @@ public class Main {
 			switch (x) {
 			case 1:
 
-				ToDoList.
+				t1.addItem();
 
 				break;
 			case 2:
-
+				t1.deletetItem();
 				break;
 			case 3:
-
+				t1.deadLineDate(t1);
 				break;
 			case 4:
-
+				t1.
 				break;
 
 			case 5:
@@ -49,7 +49,7 @@ public class Main {
 				break;
 			case 8:
 
-				tlist.printTodoList();
+				t1.printTodoList();
 				break;
 
 			default:System.out.println(" please enter a number between 1 and 8");

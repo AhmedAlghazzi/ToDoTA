@@ -10,7 +10,6 @@ public class ToDo {
 		this.date = date;
 	}
 	
-	
 	public String getTask() {
 		return task;
 	}
@@ -22,12 +21,6 @@ public class ToDo {
 	}
 	public void setDate(LocalDate date) {
 		this.date = date;
-	}
-
-
-	@Override
-	public String toString() {
-		return "ToDo [task=" + task + ", date=" + date + "]";
 	}
 	
 	
