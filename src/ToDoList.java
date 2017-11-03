@@ -4,29 +4,29 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class ToDoList {
-	
+public class ToDoList extends ArraydeaList {
+
 	ArrayList<ToDo> tlist=new ArrayList<ToDo>();
-		private ToDo t;
+	private ToDo t;
 	Scanner sc= new Scanner(System.in);
 	private static int nTask=0;
-	
-	
+
+
 	public void addItem() 
 	{
 		System.out.println("Enter Your Task Name");
 		String task= sc.nextLine();
-		
+
 		System.out.println("Enter Your Task Time");
 		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
-		
+
 		t=new ToDo(task,localDate);
 		tlist.add(t);
 		System.out.println("Item Added");		
-	
+
 		nTask++;
-		
+
 	}
 	public void deletetItem() 
 	{
@@ -35,39 +35,51 @@ public class ToDoList {
 		tlist.remove(x-1);
 		System.out.println("Item deleated");
 		nTask--;
-		
-			}
+
+	}
 	public void editItem() 
 	{
-		
+
 		System.out.println("Enter the new title:");
 		String task= sc.nextLine();
-		
+
 		System.out.println("Enter the new date of the task:");
 		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
 		t.setTask(task);
 		t.setDate(localDate);
-		
+
 	}
 	public void deadLineDate(ToDoList tlist) 
 	{
+
+		//		System.out.println("Enter item task number you want cha");
+		//		int x=sc.nextInt();
+		LocalDate today=LocalDate.now();
 		
-//		System.out.println("Enter item task number you want cha");
-//		int x=sc.nextInt();
-				LocalDate today=LocalDate.now();
-				
-		if(today < tlist){
+		
+		Iterator<ToDo> it = tlist.iterator();
+		while (it.hasNext()){
 			
-		    System.out.println("SAME");
+			Iterator<LocalDate> it2 =tlist.iterator();
+			int i=0;
+			
+			if(today > tlist.i ){
+
+				System.out.println("SAME");
+			}
+			i++;
 		}
+
 		
+
 		
-		
+
+
 	}
 	public void printTodoList() {
-		
-	Iterator<ToDo> it1=tlist.iterator();
+
+		Iterator<ToDo> it1=tlist.iterator();
 		while (it1.hasNext())
 		{
 			ToDo t2=it1.next();
