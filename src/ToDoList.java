@@ -15,13 +15,13 @@ public class ToDoList {
 	public void addItem() 
 	{
 		System.out.println("Enter Your Task Name");
-		String task= sc.nextLine();
+		String task= sc.next();
 		
 		System.out.println("Enter Your Task Time");
 		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
 		
-		t=new ToDo(task,localDate);
+		ToDo t=new ToDo(task,localDate);
 		tlist.add(t);
 		System.out.println("Item Added");		
 	
@@ -39,17 +39,19 @@ public class ToDoList {
 			}
 	public void editItem() 
 	{
-		
+		System.out.println("choos the item number you want to edit");
+		int x=sc.nextInt();
+		tlist.get(x-1);
 		System.out.println("Enter the new title:");
-		String task= sc.nextLine();
-		
+		String task= sc.next();
+		 t.setTask(task);
 		System.out.println("Enter the new date of the task:");
 		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
-		t.setTask(task);
 		t.setDate(localDate);
-		
+		System.out.println("Item edited");
 	}
+	
 	public void deadLineDate(ToDoList tlist) 
 	{
 		
@@ -57,14 +59,13 @@ public class ToDoList {
 //		int x=sc.nextInt();
 				LocalDate today=LocalDate.now();
 				
-		if(today < tlist){
-			
+					
 		    System.out.println("SAME");
 		}
 		
 		
 		
-	}
+	
 	public void printTodoList() {
 		
 	Iterator<ToDo> it1=tlist.iterator();
@@ -72,7 +73,7 @@ public class ToDoList {
 		{
 			ToDo t2=it1.next();
 			System.out.println("Number of the task    |     Description");
-			System.out.println(+nTask+"                    "+t2.toString());
+			System.out.println(+tlist.lastIndexOf(it1)+"                    "+t2.toString());
 		}
 	}
 	public ToDoList() {

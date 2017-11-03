@@ -10,6 +10,11 @@ public class ToDo {
 		this.date = date;
 	}
 	
+	@Override
+	public String toString() {
+		return "ToDo [task=" + task + ", date=" + date + "]";
+	}
+
 	public String getTask() {
 		return task;
 	}
