@@ -1,15 +1,13 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ToDoList extends java.awt.List  {
+public class ToDoList {
 	
-	
-	List<ToDo> TodoList=new LinkedList<ToDo>();
-	private ToDo t;
+	ArrayList<ToDo> tlist=new ArrayList<ToDo>();
+		private ToDo t;
 	Scanner sc= new Scanner(System.in);
 	private static int nTask=0;
 	
@@ -23,11 +21,8 @@ public class ToDoList extends java.awt.List  {
 		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
 		
-
-		TodoList.add(new ToDo(task,localDate));
-
 		t=new ToDo(task,localDate);
-		TodoList.add(t);
+		tlist.add(t);
 		System.out.println("Item Added");		
 	
 		nTask++;
@@ -37,12 +32,11 @@ public class ToDoList extends java.awt.List  {
 	{
 		System.out.println("Enter item task number you want to delete");
 		int x=sc.nextInt();
-		TodoList.remove(x-1);
+		tlist.remove(x-1);
 		System.out.println("Item deleated");
 		nTask--;
 		
-	}
-
+			}
 	public void editItem() 
 	{
 		
@@ -50,7 +44,7 @@ public class ToDoList extends java.awt.List  {
 		String task= sc.nextLine();
 		
 		System.out.println("Enter the new date of the task:");
-		String date= sc.nextLine();
+		String date= sc.next();
 		LocalDate localDate = LocalDate.parse(date);
 		t.setTask(task);
 		t.setDate(localDate);
@@ -61,42 +55,24 @@ public class ToDoList extends java.awt.List  {
 		
 //		System.out.println("Enter item task number you want cha");
 //		int x=sc.nextInt();
-//				LocalDate today=LocalDate.now();
-//				Iterator<ToDo> it1=tList.iterator;		
-//		for (ToDo toDo : tList) {
-//			
-//		}		
-//		if(today < ){
-//			
-//		    System.out.println("SAME");
-//		}
-//		
+				LocalDate today=LocalDate.now();
+				
+		if(today < tlist){
+			
+		    System.out.println("SAME");
+		}
 		
 		
-	}
-	public void removeDoneItem(ToDoList tlist) 
-	{
-//		Iterator<ToDo> it1=new 
-//		for (int i = 0; i < tlist.nTask+1 ; i++) 
-//		{
-//			LocalDate dlist=tlist.getDate();
-//			LocalDate dNow=LocalDate.now();
-//			if (dNow > dlist) {
-//				
-//			} else {
-//
-//			}
-//		}
 		
 	}
 	public void printTodoList() {
 		
-	Iterator<ToDo> it1=TodoList.iterator();
+	Iterator<ToDo> it1=tlist.iterator();
 		while (it1.hasNext())
 		{
 			ToDo t2=it1.next();
 			System.out.println("Number of the task    |     Description");
-			System.out.println(+nTask+"                     "+t2.toString());
+			System.out.println(+nTask+"                    "+t2.toString());
 		}
 	}
 

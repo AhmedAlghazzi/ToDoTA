@@ -6,12 +6,11 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		ArrayList<ToDo> tlist=new ArrayList<ToDo>();
+		
 		int i=0;
-
-		ToDoList tlist=new ToDoList();
 		Scanner sc= new Scanner(System.in);
-		
-		
+
 
 		do {
 			System.out.println("Enter 1 add an item\n"
@@ -25,8 +24,8 @@ public class Main {
 			int x=sc.nextInt();
 			switch (x) {
 			case 1:
-				
-				tlist.addItem();
+
+				ToDoList.
 
 				break;
 			case 2:
@@ -54,7 +53,7 @@ public class Main {
 				break;
 
 			default:System.out.println(" please enter a number between 1 and 8");
-				break;
+			break;
 			}
 			i++;
 
